@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "FastMail Notifier",
+	"version": "0.1.0",
+	"minimum_chrome_version": "40",
+	"description": "Shows unread mail count from FastMail",
+	"icons": {
+		"128": "/assets/images/icon128.png",
+		"48": "/assets/images/icon48.png"
+	},
+	"browser_action": {
+		"default_icon": "assets/images/icon_disabled.png"
+	},
+	"background": {
+		"persistent": true,
+		"scripts": ["assets/js/background.js"]
+	},
+	"permissions": [
+		"storage", "webRequest", "alarms", "notifications", "https://www.fastmail.com/*"
+	],
+	"options_ui": {
+		"page": "options.html",
+		"chrome_style": true
+	}
+}
